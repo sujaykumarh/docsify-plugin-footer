@@ -2,7 +2,7 @@
 
 A simple plugin to add page footer to [docsify](https://github.com/docsifyjs/docsify/)
 
-[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/sujaykumarh/docsify-plugin-footer/%F0%9F%9A%80%20publish)](https://github.com/Sujaykumarh/docsify-plugin-footer/actions)
+[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/sujaykumarh/docsify-plugin-footer/Build%20&%20Publish%20package)](https://github.com/Sujaykumarh/docsify-plugin-footer/actions)
 [![GitHub package.json version](https://img.shields.io/github/package-json/v/sujaykumarh/docsify-plugin-footer)](https://www.npmjs.com/package/@sujaykumarh/docsify-plugin-footer)
 [![jsDelivr hits (npm)](https://img.shields.io/jsdelivr/npm/hm/@sujaykumarh/docsify-plugin-footer)](https://www.jsdelivr.com/package/npm/@sujaykumarh/docsify-plugin-footer)
 
