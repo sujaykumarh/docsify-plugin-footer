@@ -31,10 +31,10 @@ Available options
 
 ```js
 window.$docsify.customPageFooter = {
-    debug:		false,              // for debugging
+    debug: false,                   // for debugging
 
-    showPoweredBy:  true,           // should show powered by docsify at right
-    copyrightYear:  '',             // show copyright year, default current year.
+    showPoweredBy: true,            // should show powered by docsify at right
+    copyrightYear: '',              // show copyright year, default current year.
     showCopyright: true,            // set to false to hide default copyright
     copyright: undefined,           // set this to html string to use custom copyrihgt section
     copyrightOwnerName: '',         // copyright owner name
