@@ -16,6 +16,7 @@
   "keywords": [
     "docsify",
     "docsify-plugin",
+    "docsify-plugin-footer",
     "plugin",
     "custom-footer"
   ],
