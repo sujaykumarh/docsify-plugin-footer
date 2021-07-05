@@ -31,7 +31,7 @@ Available options
 
 ```js
 window.$docsify.customPageFooter = {
-	debug:		false,              // for debugging
+    debug:		false,              // for debugging
 
     showPoweredBy:  true,           // should show powered by docsify at right
     copyrightYear:  '',             // show copyright year, default current year.
