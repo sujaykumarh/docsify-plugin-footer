@@ -74,6 +74,29 @@ Example:
 </script>
 ```
 
+**Colors**
+
+set `a` link colors set `--primary` & `--primary-dark` in `:root`
+
+* `--primary` is used default link color
+
+* `--primary-dark` is used when link:hover
+
+Example:
+
+```css
+...
+
+
+:root {
+    --primary: #0f5d9c;
+    --pirmary-dark: #0a4677;
+}
+
+
+...
+```
+
 <br>
 
 # 🛠️ Development

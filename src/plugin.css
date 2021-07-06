@@ -10,12 +10,6 @@
  * Licensed under Apache License, Version 2.0
  */
 
-:root {
-    --primary: #0f5d9c;
-    --pirmary-dark: #0a4677;
-    --pirmary-light: #348bd3;
-}
-
 #customFooter{
     border-top: 1px solid #e5e5e5;
     padding-top: 2rem;
@@ -29,12 +23,16 @@
     float: right;
 }
 
+#customFooter .copyright a{
+    padding-left: 5px;
+}
+
 #customFooter a{
-    color: var(--primary) !important;
-    text-decoration: underline dotted !important;
+    color: var(--primary, #42b983);
+    text-decoration: underline dotted;
 }
 
 #customFooter a:hover{
-    color: var(--primary-dark) !important;
-    text-decoration: underline !important;
+    color: var(--primary-dark, #2c7554);
+    text-decoration: underline;
 }
