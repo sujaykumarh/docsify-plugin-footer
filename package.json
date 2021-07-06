@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Sujaykumarh/docsify-plugin-footer.git"
+    "url": "git+https://github.com/sujaykumarh/docsify-plugin-footer.git"
   },
   "keywords": [
     "docsify",
@@ -23,9 +23,9 @@
   "author": "Sujaykumar Hublikar <hello@sujaykumarh.com> (https://sujaykumarh.com)",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/Sujaykumarh/docsify-plugin-footer/issues"
+    "url": "https://github.com/sujaykumarh/docsify-plugin-footer/issues"
   },
-  "homepage": "https://github.com/Sujaykumarh/docsify-plugin-footer#readme",
+  "homepage": "https://github.com/sujaykumarh/docsify-plugin-footer#readme",
   "devDependencies": {
     "cssnano": "^5.0.6",
     "cssnano-preset-advanced": "^5.1.3",
