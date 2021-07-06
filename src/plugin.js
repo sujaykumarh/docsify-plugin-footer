@@ -40,6 +40,8 @@ const customPageFooterOptions = {
     copyrightOwnerName: '',         // copyright owner name
     copyrightOwnerLink: undefined,  // copyright owner link if any
     copyrightExtra: undefined,      // any exta text to show below copyright owner section
+
+    useLocalStorage: true,          // build and store footer in localstorage for quick access
 }
 
 const _storageKeyFooter = 'custom-footer';
@@ -81,7 +83,8 @@ function buildFooter() {
 
 
     var footer = '<footer id="customFooter">' + footer + '</footer>';
-    localStorage.setItem(_storageKeyFooter, footer);
+
+    if(customPageFooterOptions.useLocalStorage) localStorage.setItem(_storageKeyFooter, footer);
 
     return footer;
 }
@@ -90,8 +93,8 @@ function buildFooter() {
 function customPageFooter( hook, vm ) {
 
 	// before hook
-	hook.beforeEach( function( content ) {
-    });
+	// hook.beforeEach( function( content ) {
+    // });
 
     // after hook
 	hook.doneEach( function() {
@@ -100,10 +103,19 @@ function customPageFooter( hook, vm ) {
 
         if(! _footer){
             var node = document.getElementById('main').parentNode;
+            if(! node){
+                error('parent node not found!');
+                return;
+            }
+
             debug("node"); debug(node);
 
-            var footer = localStorage.getItem(_storageKeyFooter);
-            debug("footer"); debug(footer);
+            var footer = undefined;
+
+            if(customPageFooterOptions.useLocalStorage){
+                footer = localStorage.getItem(_storageKeyFooter);
+                debug("footer from ls -> " + footer);
+            }
 
             node.innerHTML += ((footer) ? footer : buildFooter());
             debug("added custom footer!");
@@ -112,11 +124,11 @@ function customPageFooter( hook, vm ) {
 }
 
 function debug(msg){
-    if(customPageFooterOptions.debug) console.log(msg);
+    if(customPageFooterOptions.debug) console.log('[customPageFooter] log: ' + msg);
 }
 
 function error(msg){
-    if(customPageFooterOptions.debug) console.error(msg);
+    if(customPageFooterOptions.debug) console.error('[customPageFooter] err: ' + msg);
 }
 
 

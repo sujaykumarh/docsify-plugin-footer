@@ -40,6 +40,8 @@ window.$docsify.customPageFooter = {
     copyrightOwnerName: '',         // copyright owner name
     copyrightOwnerLink: undefined,  // copyright owner link if any
     copyrightExtra: undefined,      // any exta text to show below copyright owner section
+
+    useLocalStorage: true,          // build and store footer in localstorage for quick access
 }
 ```
 
