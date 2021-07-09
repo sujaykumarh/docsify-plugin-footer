@@ -31,10 +31,10 @@
 
 // config options
 const customPageFooterOptions = {
-	debug:		false,              // for debugging
+    debug: false,                   // for debugging
 
-    showPoweredBy:  true,           // should show powered by docsify at right
-    copyrightYear:  '',             // show copyright year, default current year.
+    showPoweredBy: true,            // should show powered by docsify at right
+    copyrightYear: '',              // show copyright year, default current year.
     showCopyright: true,            // set to false to hide default copyright
     copyright: undefined,           // set this to html string to use custom copyrihgt section
     copyrightOwnerName: '',         // copyright owner name
@@ -51,59 +51,59 @@ function buildFooter() {
     var footer = '';
 
     // PoweredBy secion
-    if(customPageFooterOptions.showPoweredBy){
+    if (customPageFooterOptions.showPoweredBy) {
         footer += '<span class="powered-by">Powered by <a href="https://github.com/docsifyjs/docsify" target="_blank">docsify</a>.</span>';
     }
 
     // Copyright section
-    if(customPageFooterOptions.showCopyright && ! customPageFooterOptions.copyright){
+    if (customPageFooterOptions.showCopyright && !customPageFooterOptions.copyright) {
         footer += '<span class="copyright">&copy; ';
 
         // year
         footer += (customPageFooterOptions.copyrightYear) ? customPageFooterOptions.copyrightYear : new Date().getFullYear();
 
         // owner
-        if(!customPageFooterOptions.copyrightOwnerLink){
+        if (!customPageFooterOptions.copyrightOwnerLink) {
             footer += customPageFooterOptions.copyrightOwnerName + '.';
-        }else{
+        } else {
             footer += '<a href="' + customPageFooterOptions.copyrightOwnerLink + '" target="_blank">' + customPageFooterOptions.copyrightOwnerName + '</a>.';
         }
 
         // Copyright Extra
-        if(customPageFooterOptions.copyrightExtra){
+        if (customPageFooterOptions.copyrightExtra) {
             footer += '<div class="copyright-extra">';
             footer += customPageFooterOptions.copyrightExtra;
             footer += '</div>'
         }
 
         footer += '</span>'
-    }else{
+    } else {
         footer += customPageFooterOptions.copyright;
     }
 
 
     var footer = '<footer id="customFooter">' + footer + '</footer>';
 
-    if(customPageFooterOptions.useLocalStorage) localStorage.setItem(_storageKeyFooter, footer);
+    if (customPageFooterOptions.useLocalStorage) localStorage.setItem(_storageKeyFooter, footer);
 
     return footer;
 }
 
 // main function
-function customPageFooter( hook, vm ) {
+function customPageFooter(hook, vm) {
 
-	// before hook
-	// hook.beforeEach( function( content ) {
+    // before hook
+    // hook.beforeEach( function( content ) {
     // });
 
     // after hook
-	hook.doneEach( function() {
+    hook.doneEach(function () {
         var _footer = document.getElementById('customFooter');
         debug("_footer"); debug(_footer);
 
-        if(! _footer){
+        if (!_footer) {
             var node = document.getElementById('main').parentNode;
-            if(! node){
+            if (!node) {
                 error('parent node not found!');
                 return;
             }
@@ -112,7 +112,7 @@ function customPageFooter( hook, vm ) {
 
             var footer = undefined;
 
-            if(customPageFooterOptions.useLocalStorage){
+            if (customPageFooterOptions.useLocalStorage) {
                 footer = localStorage.getItem(_storageKeyFooter);
                 debug("footer from ls -> " + footer);
             }
@@ -123,23 +123,23 @@ function customPageFooter( hook, vm ) {
     });
 }
 
-function debug(msg){
-    if(customPageFooterOptions.debug) console.log('[customPageFooter] log: ' + msg);
+function debug(msg) {
+    if (customPageFooterOptions.debug) console.log('[customPageFooter] log: ' + msg);
 }
 
-function error(msg){
-    if(customPageFooterOptions.debug) console.error('[customPageFooter] err: ' + msg);
+function error(msg) {
+    if (customPageFooterOptions.debug) console.error('[customPageFooter] err: ' + msg);
 }
 
 
 // find customPageFooter plugin options
 window.$docsify.customPageFooter = Object.assign(
-	customPageFooterOptions,
-	window.$docsify.customPageFooter,
+    customPageFooterOptions,
+    window.$docsify.customPageFooter,
 );
 
 // Set docsify plugin
 window.$docsify.plugins = [].concat(
-	customPageFooter,
-	window.$docsify.plugins,
+    customPageFooter,
+    window.$docsify.plugins,
 );
