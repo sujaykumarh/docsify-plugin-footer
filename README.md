@@ -2,7 +2,7 @@
 
 A simple plugin to add page footer to [docsify](https://github.com/docsifyjs/docsify/)
 
-[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/sujaykumarh/docsify-plugin-footer/Build%20&%20Publish%20package)](https://github.com/Sujaykumarh/docsify-plugin-footer/actions)
+<!--[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/sujaykumarh/docsify-plugin-footer/Build%20&%20Publish%20package)](https://github.com/Sujaykumarh/docsify-plugin-footer/actions)-->
 [![GitHub package.json version](https://img.shields.io/github/package-json/v/sujaykumarh/docsify-plugin-footer)](https://www.npmjs.com/package/@sujaykumarh/docsify-plugin-footer)
 [![jsDelivr hits (npm)](https://img.shields.io/jsdelivr/npm/hm/@sujaykumarh/docsify-plugin-footer)](https://www.jsdelivr.com/package/npm/@sujaykumarh/docsify-plugin-footer)
 
@@ -128,18 +128,4 @@ npm run minify:js   # generate minified js resources in ./dist
 
 # 📄 License
 
-```
-Copyright (c) 2021 Sujaykumar.Hublikar <hello@sujaykumarh.com>
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-```
+Copyright (c) 2021  [Sujay H](https://github.com/sujaykumarh) Licensed under `Apache License v2.0` read [LICENSE](./LICENSE)

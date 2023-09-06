@@ -1,12 +1,12 @@
 {
   "name": "@sujaykumarh/docsify-plugin-footer",
-  "version": "1.0.4",
+  "version": "1.2.0",
   "description": "Docsify plugin custom page title",
   "main": "src/plugin.js",
   "scripts": {
     "minify:js": "terser src/plugin.js -o dist/plugin.min.js",
     "minify:css": "postcss src/plugin.css > dist/plugin.min.css",
-    "minify": "npm run minify:js; npm run minify:css",
+    "minify": "yarn run minify:js; yarn run minify:css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,7 +20,7 @@
     "plugin",
     "custom-footer"
   ],
-  "author": "Sujaykumar Hublikar <hello@sujaykumarh.com> (https://sujaykumarh.com)",
+  "author": "Sujay H <hello@sujaykumarh.com> (https://sujaykumarh.com)",
   "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/sujaykumarh/docsify-plugin-footer/issues"
